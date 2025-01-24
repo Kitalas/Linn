@@ -6,9 +6,6 @@ class Book:
         self.year = year
         self.genre = genre
 
-    def __repr__(self):
-        return f"Book(author='{self.author}', title='{self.title}', year={self.year}, genre='{self.genre}')"
-
     def __str__(self):
         return f"'{self.title}' by {self.author}, published in {self.year} (Genre: {self.genre})"
 
@@ -28,9 +25,6 @@ class Review:
         self.reviewer = reviewer
         self.content = content
 
-    def __repr__(self):
-        return f"Review(reviewer='{self.reviewer}', content='{self.content}')"
-
     def __str__(self):
         return f"{self.reviewer}: {self.content}"
 
@@ -44,9 +38,6 @@ class Book:
 
     def add_review(self, review):
         self.reviews.append(review)
-
-    def __repr__(self):
-        return f"Book(author='{self.author}', title='{self.title}', year={self.year}, genre='{self.genre}')"
 
     def __str__(self):
         reviews_str = "\n".join(str(review) for review in self.reviews) if self.reviews else "No reviews yet."
@@ -67,9 +58,6 @@ class Car:
         self.model = model
         self.year = year
         self.price = price
-
-    def __repr__(self):
-        return f"{self.year} {self.make} {self.model} (${self.price})"
 
     def __str__(self):
         return f"{self.year} {self.make} {self.model}, Price: ${self.price}"
