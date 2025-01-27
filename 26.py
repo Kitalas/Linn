@@ -69,15 +69,16 @@ d.method()
 
 # exp5
 def adult_check(func):
-    def wrapper(*args, *kwargs):
-        age = func(*args, *kwargs)
-        return age >= 18
+    def adult_check(func):
+        def wrapper(*args, *kwargs):
+            age = func(*args, *kwargs)
+            return age >= 18
 
-    return wrapper
+        return wrapper
 
-@adult_check
-def age_in_ukraine(years):
-    return years
+    @adult_check
+    def age_in_ukraine(years):
+        return years
 
 @adult_check
 def age_in_usa(years):
