@@ -61,19 +61,6 @@ class Temperature:
     def fahrenheit(self, value):
         self._celsius = (value - 32) * 5/9
 
-# exp4
-class Base:
-    @classmethod
-    def method(cls):
-        print("Hello from Base")
-
-class Child(Base):
-    @classmethod
-    def method(cls):
-        print("Hello from Child")
-
-Base.method()
-Child.method()
 
 # exp5
 import matplotlib.pyplot as plt
