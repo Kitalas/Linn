@@ -91,7 +91,6 @@ def register_user(user: User):
 
 
 def send_email(user: User):
-    # Налаштування SMTP для Gmail
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
     sender_email = "your_email@gmail.com"
